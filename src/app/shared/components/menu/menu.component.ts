@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'vc-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  public menuItems = {
+    logo: 'fa-anchor',
+    menus: [
+      {
+        icon: 'fa-home'
+      },
+      {
+        icon: 'fa-users'
+      },
+      {
+        icon: 'fa-suitcase'
+      },
+      {
+        icon: 'fa-calendar-alt'
+      },
+      {
+        icon: 'fa-calculator'
+      },
+      {
+        icon: 'fa-portrait'
+      },
+    ]
+  };
 
 }

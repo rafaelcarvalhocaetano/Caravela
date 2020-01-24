@@ -1,1 +1,10 @@
-<p>menu works!</p>
+<ul class="vc-list">
+  <div class="vc-logo">
+    <i class="fas {{ menuItems.logo }}"></i>
+  </div>
+  <li class="vc-item" *ngFor="let menu of menuItems.menus">
+    <a class="vc-item-action">
+      <i class="fas {{ menu.icon }}"></i>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,46 @@
+@import '../../../../assets/styles/variables.scss';
+
+.vc-list {
+  width: 50px;
+  background-color: $primary;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $icon-color;
+  padding: 15px 0;
+  box-sizing: border-box;
+  .vc-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid $secundary;
+    padding: 6%;
+    margin-bottom: 10px;
+    i {
+      font-size: 14px;
+    }
+  }
+  .vc-item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    .vc-item-action {
+      padding: 15px 0;
+      box-sizing: border-box;
+      i {
+        font-size: 12px;
+      }
+    }
+    &:hover {
+      color: #FFF;
+      border-left: 2px solid $secundary;
+      background-color: rgba(0, 0, 0, 0.233);
+    }
+
+  }
+}

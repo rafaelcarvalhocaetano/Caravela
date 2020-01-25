@@ -1,11 +1,33 @@
-.menu {
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixis.scss';
+
+.container {
+  width: 100vw;
   display: flex;
-  margin: 40px 0 0 10px;
-  .card {
-    margin: 0 5%;
-    padding: 10px 10px;
-    overflow-x: scroll;
+  background-color: $ground;
+  .menu {
+    width: 8vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-table {
+    width: 90vw;
+    padding: 0 1vw;
+    .card-scrool {
+      padding: 10px 10px;
+      overflow-x: scroll;
+      @include scrollbar();
+
+    }
+  }
+  .table {
+    margin-top: 30px;
+    width: 90vw;
+    height: 40vh;
+    overflow-y: auto;
+    @include scrollbar();
   }
 }
-
 

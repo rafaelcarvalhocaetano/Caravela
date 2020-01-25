@@ -1,10 +1,14 @@
+@import '../../../../assets/styles/variables.scss';
+
+@import '../../../../assets/styles/mixis.scss';
+
 .card-list {
   display: flex;
   .card-item {
     background-color: #FFF;
     border-radius: 7px;
     margin-right: 25px;
-    border: 1px solid rgba(204, 204, 204, 0.349);
+    border: 1px solid rgba(228, 227, 227, 0.521);
     .card-action {
       width: 220px;
       display: flex;
@@ -12,9 +16,15 @@
       align-items: center;
       .icon-border {
         margin: 15px 0 10px 0;
-        padding: 10px;
-        border-radius: 50%;
-        background-color: #FFF;
+        .fa-sun {
+          @include border_icon($icon-blue-primary, $icon-blue);
+        }
+        .fa-graduation-cap {
+          @include border_icon($icon-table-yellow, $icon-table-yellow-secundary);
+        }
+        .fa-baby-carriage {
+          @include border_icon($icon-table-green, $icon-blue);
+        }
       }
       .item-vocation, .item-value {
         margin-bottom: 10px;
@@ -32,7 +42,7 @@
       &:hover {
         border-radius: 7px;
         cursor: pointer;
-        background-color: #CCC;
+        background-color: #FFF;
       }
     }
   }

@@ -1,0 +1,100 @@
+@import '../../../../assets/styles/variables.scss';
+@import '../../../../assets/styles/mixis.scss';
+
+.table-list {
+  background-color: transparent;
+  .table-item {
+    .table-action {
+      width: 70%;
+      padding: 1% 4% 1% 2%;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .dates, .clock, .status {
+        display: flex;
+      }
+      .icons {
+        .ic  {
+          display: flex;
+          align-items: center;
+          P {
+            width: 200px;
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            color: $font-primary;
+          }
+          .icf {
+            padding: 8px;
+            font-size: 15px;
+            border-radius: 50%;
+          }
+        }
+        .basic {
+          @include icon_color($icon-blue-primary, $icon-blue);
+        }
+        .study {
+          @include icon_color($icon-table-yellow, $icon-table-yellow-secundary);
+        }
+        .parental {
+          @include icon_color($icon-table-green, $icon-blue);
+        }
+      }
+      .dates {
+        width: 300px;
+        color: $font-secundary;
+        font-weight: 600;
+        font-size: 16px;
+        i {
+          color: $icon-color;
+          margin-right: 20px;
+        }
+        .before-date {
+          width: 90px;
+        }
+        span {
+          margin: 0 5px;
+        }
+        .after-date {
+          width: 90px;
+        }
+      }
+      .clock {
+        width: 120px;
+        i {
+          color: $icon-color;
+          margin-right: 20px;
+        }
+        p {
+          color: $font-secundary;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+      .status {
+        width: 110px;
+        color: $font-secundary;
+        font-weight: 600;
+        font-size: 16px;
+        p {
+          width: 120px;
+        }
+      }
+      .approved {
+        @include icon_color($icon-table-green, null);
+      }
+      .pending {
+        @include icon_color($icon-table-yellow, null);
+      }
+      .rejected {
+        @include icon_color($icon-table-red, null);
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: #FFF;
+      }
+    }
+
+  }
+}

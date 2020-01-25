@@ -1,0 +1,39 @@
+.card-list {
+  display: flex;
+  .card-item {
+    background-color: #FFF;
+    border-radius: 7px;
+    margin-right: 25px;
+    border: 1px solid rgba(204, 204, 204, 0.349);
+    .card-action {
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .icon-border {
+        margin: 15px 0 10px 0;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: #FFF;
+      }
+      .item-vocation, .item-value {
+        margin-bottom: 10px;
+      }
+      .item-value {
+        margin-top: 10px;
+        span {
+          font-size: 10px;
+          margin-left: 3px;
+        }
+      }
+      .item-plan {
+        margin-bottom: 20px;
+      }
+      &:hover {
+        border-radius: 7px;
+        cursor: pointer;
+        background-color: #CCC;
+      }
+    }
+  }
+}

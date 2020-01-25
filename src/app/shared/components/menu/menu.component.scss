@@ -10,6 +10,8 @@
   color: $icon-color;
   padding: 15px 0;
   box-sizing: border-box;
+
+  position: fixed;
   .vc-logo {
     display: flex;
     flex-direction: column;

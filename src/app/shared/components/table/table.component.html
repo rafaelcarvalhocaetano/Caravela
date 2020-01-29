@@ -1,120 +1,39 @@
 <ul class="table-list">
-  <li class="table-item">
-    <a class="table-action">
+  <li class="table-item" *ngFor="let item of itens">
+    <a class="table-action" (click)="ack(item.id)" [ngClass]="{'bkg': id === item.id}">
       <div class="icons">
-        <div class="ic basic" *ngIf="true">
+        <div class="ic basic" *ngIf="item.is_basic">
           <i class="icf far fa-sun"></i>
-          <P>Basic Vocation</P>
+          <P>{{ item.vocation }}</P>
         </div>
-        <div class="ic study" *ngIf="false">
+        <div class="ic study" *ngIf="item.is_study">
           <i class="icf fas fa-graduation-cap"></i>
-          <p>Study vocation</p>
+          <p>{{ item.vocation }}</p>
         </div>
-        <div class="ic parental" *ngIf="false">
+        <div class="ic parental" *ngIf="item.is_parental">
           <i class="icf fas fa-baby-carriage"></i>
-          <P>Parental vocation</P>
+          <P>{{ item.vocation }}</P>
         </div>
       </div>
       <div class="dates">
         <i class="fas fa-calendar-alt"></i>
-        <p class="before-date">27.08.2019</p>
+        <p class="before-date">{{ item.date_visited }}</p>
         <span>-</span>
-        <p class="after-date">15.09.2019</p>
+        <p class="after-date">{{ item.date_return }}</p>
       </div>
       <div class="clock">
         <i class="far fa-clock"></i>
-        <p>16 Days</p>
+        <p>{{ item.date_time_now }} Days</p>
       </div>
-
-      <div class="status approved" *ngIf="true">
+      <div class="status approved" *ngIf="item.is_approved">
         <p>Approved</p>
         <i class="fas fa-check-circle"></i>
       </div>
-      <div class="status pending" *ngIf="false">
+      <div class="status pending" *ngIf="item.is_pending">
         <p>Pending</p>
         <i class="fas fa-clock"></i>
       </div>
-      <div class="status rejected" *ngIf="false">
-        <p>Rejected</p>
-        <i class="fas fa-times-circle"></i>
-      </div>
-    </a>
-  </li>
-  <li class="table-item">
-    <a class="table-action">
-      <div class="icons">
-        <div class="ic basic" *ngIf="false">
-          <i class="icf far fa-sun"></i>
-          <P>Basic Vocation</P>
-        </div>
-        <div class="ic study" *ngIf="true">
-          <i class="icf fas fa-graduation-cap"></i>
-          <p>Study vocation</p>
-        </div>
-        <div class="ic parental" *ngIf="false">
-          <i class="icf fas fa-baby-carriage"></i>
-          <P>Parental vocation</P>
-        </div>
-      </div>
-      <div class="dates">
-        <i class="fas fa-calendar-alt"></i>
-        <p class="before-date">27.08.2019</p>
-        <span>-</span>
-        <p class="after-date">15.09.2019</p>
-      </div>
-      <div class="clock">
-        <i class="far fa-clock"></i>
-        <p>16 Days</p>
-      </div>
-      <div class="status approved" *ngIf="false">
-        <p>Approved</p>
-        <i class="fas fa-check-circle"></i>
-      </div>
-      <div class="status pending" *ngIf="true">
-        <p>Pending</p>
-        <i class="fas fa-clock"></i>
-      </div>
-      <div class="status rejected" *ngIf="false">
-        <p>Rejected</p>
-        <i class="fas fa-times-circle"></i>
-      </div>
-    </a>
-  </li>
-  <li class="table-item">
-    <a class="table-action">
-      <div class="icons">
-        <div class="ic basic" *ngIf="false">
-          <i class="icf far fa-sun"></i>
-          <P>Basic Vocation</P>
-        </div>
-        <div class="ic study" *ngIf="false">
-          <i class="icf fas fa-graduation-cap"></i>
-          <p>Study vocation</p>
-        </div>
-        <div class="ic parental" *ngIf="true">
-          <i class="icf fas fa-baby-carriage"></i>
-          <P>Parental vocation</P>
-        </div>
-      </div>
-      <div class="dates">
-        <i class="fas fa-calendar-alt"></i>
-        <p class="before-date">27.08.2019</p>
-        <span>-</span>
-        <p class="after-date">15.09.2019</p>
-      </div>
-      <div class="clock">
-        <i class="far fa-clock"></i>
-        <p>16 Days</p>
-      </div>
-      <div class="status approved" *ngIf="false">
-        <p>Approved</p>
-        <i class="fas fa-check-circle"></i>
-      </div>
-      <div class="status pending" *ngIf="false">
-        <p>Pending</p>
-        <i class="fas fa-clock"></i>
-      </div>
-      <div class="status rejected" *ngIf="true">
+      <div class="status rejected" *ngIf="item.is_rejected">
         <p>Rejected</p>
         <i class="fas fa-times-circle"></i>
       </div>

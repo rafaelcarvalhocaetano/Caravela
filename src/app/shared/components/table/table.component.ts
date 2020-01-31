@@ -13,10 +13,9 @@ export class TableComponent implements OnInit {
   public actionList = false;
   public id: number;
 
-
   constructor(
     private service: VocationsService
-  ) {  }
+  ) { }
 
   ngOnInit() {
     this.findList();

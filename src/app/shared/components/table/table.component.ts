@@ -18,11 +18,9 @@ export class TableComponent implements OnInit {
     private service: VocationsService
   ) {  }
 
-
   ngOnInit() {
     this.findList();
   }
-
 
   public clickAction(data: number) {
     this.actionList = false;

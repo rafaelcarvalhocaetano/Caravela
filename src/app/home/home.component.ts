@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { VocationsService } from '../core/service/vocations/vocations.service';
 import { Vocation } from '../core/models/vocation';
 
 @Component({
